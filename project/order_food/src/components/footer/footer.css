@@ -1,0 +1,54 @@
+footer {
+  margin-top: 50px;
+  padding: 30px 12px;
+  background-color: var(--main-bg);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between; /* Canh các phần tử con theo chiều ngang */
+}
+
+.footer-item {
+  flex: 1; /* Cân đều các phần tử con theo chiều ngang */
+  text-align: left; /* Căn văn bản sang trái */
+}
+
+.footer-item p:first-child {
+  font-weight: bolder;
+  margin-bottom: 12px;
+}
+
+.footer-item p {
+  font-weight: lighter;
+  line-height: 30px;
+  margin: 0;
+  color: black;
+}
+
+.footer-item p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+#nuttop {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: orangered;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2%;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#nuttop.hientop {
+  opacity: 1;
+}

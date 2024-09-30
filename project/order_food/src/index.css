@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap");
+:root {
+  --header-height: 35px;
+  --main-bg: #f4f4f4;
+  --main-transition: all 0.3s ease;
+  --main-color: black;
+  --main-font-weight: 500;
+  --main-color-hovericon: orangered;
+}
+html {
+  scroll-behavior: smooth;
+  /* hành động cuộn trang */
+}
+body {
+  font-family: "Poppins", sans-serif;
+  /* font-family:'Courier New', Courier, monospace; */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+input {
+  outline: none;
+}
+.container {
+  max-width: 1500px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.row-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.row-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--main-color);
+}
+
+.row-grid-oneitem {
+  grid-template-columns: 100%;
+}
+.p-to-top {
+  padding-top: var(--header-height) + 20px;
+}
+.main-btn {
+  padding: 12px 12px;
+  border: none;
+  color: var(--main-color);
+  background-color: black;
+  cursor: pointer;
+}
+.main-h2 {
+  font-weight: var(--main-font-weight);
+  margin: 12px 0;
+  font-size: 20px;
+}
+.hot-product-item-price {
+  margin-top: 6px;
+}
+.hot-product-item-price p {
+  font-weight: var(--main-font-weight);
+}
+.hot-product-item-price p span {
+  font-weight: 300;
+  font-size: small;
+  text-decoration: line-through; /* gach ngang */
+}
+.heading-text {
+  font-weight: bolder;
+  padding: 6px;
+  position: relative;
+  margin: 20px 0;
+  font-size: 18px;
+}
+.heading-text::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 50%;
+  background-color: gray;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.heading-text::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: gray;
+  bottom: 0;
+  left: 12px;
+  border-radius: 10px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

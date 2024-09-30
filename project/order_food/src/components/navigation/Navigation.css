@@ -1,0 +1,129 @@
+/* --------HEADER----------------------------------------------------------- */
+header {
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: white;
+  padding: 0 40px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+header .row-flex {
+  display: flex;
+}
+.row-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 200px;
+}
+
+/* Logo styling */
+.header-logo img {
+  width: 190px;
+  cursor: pointer;
+}
+
+/* Navigation styling */
+.header-nav {
+  margin-right: 100px;
+  padding-top: 5px;
+}
+
+.header-nav nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav nav ul li {
+  font-size: 18px; /* Increased font size */
+  font-weight: bold; /* Made font bold */
+}
+
+.header-nav nav ul li a {
+  color: var(--main-color);
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.header-nav nav ul li a:hover {
+  color: var(--main-color-hovericon);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  padding-left: 130px;
+  padding-top: 5px;
+}
+
+.header-icons a {
+  font-size: 20px;
+  color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header-icons a i {
+  font-size: 30px;
+}
+
+.header-icons a:hover i {
+  color: var(--main-color-hovericon);
+}
+
+.header-icons input#search-input {
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 33px;
+  width: 200px;
+  border: 2px solid black;
+  padding-left: 10px;
+  border-radius: 50px;
+  outline: none;
+  display: none;
+  transition: width 0.3s ease;
+}
+
+/* .show-search-input {
+  display: inline-block;
+  left: 0;
+} */
+
+/* .show-search-input {
+  display: inline-block;
+  left: -200px;
+}  */
+
+.header-icons a .bxs-shopping-bag {
+  font-size: 30px;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header-icons a:hover .bxs-shopping-bag {
+  color: var(--main-color-hovericon);
+}
+
+.header-icons a .bxs-user {
+  font-size: 30px;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header-icons a:hover .bxs-user {
+  color: var(--main-color-hovericon);
+}
