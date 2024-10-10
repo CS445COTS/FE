@@ -1,5 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ProductFood.css";
+import { filterCategory } from "../data/filter";
+import {
+  FormControl,
+  Radio,
+  FormControlLabel,
+  FormLabel,
+  RadioGroup,
+} from "@mui/material";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
 
 export default function ProductFood() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -40,27 +60,55 @@ export default function ProductFood() {
           </div>
 
           {openMenu && (
-            <aside className="filter" id="filterMenu">
+            <aside class="filter" id="filterMenu">
               <h3>LỌC</h3>
-              <div className="filter-category">
+              <div class="filter-category">
                 <h4>Theo tên</h4>
                 <input
                   type="text"
                   id="filterName"
                   placeholder="Tìm kiếm theo tên sản phẩm"
-                  onInput={() => {
-                    /* logic lọc sản phẩm */
-                  }}
+                  oninput="filterProducts()"
                 />
               </div>
-              <div className="filter-category">
-                <h4>Theo giá</h4>
-                <input
-                  type="number"
-                  id="minPrice"
-                  placeholder="Giá tối thiểu"
-                />
-                <input type="number" id="maxPrice" placeholder="Giá tối đa" />
+              <form></form>
+              <div class="filter-category">
+                <h4>Theo danh mục</h4>
+                {/* {filterCategory.map((section) => (
+                  <select id="categorySelect" onchange="filterProducts()">
+                      <option value={section.options.}></option>
+                  </select>
+                ))} */}
+              </div>
+              <div class="filter-category">
+                <h4>Theo khoảng giá</h4>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="priceRange"
+                    value="50-100"
+                    id="range1"
+                  />
+                  <label htmlFor="range1">50 - 100</label>
+                </div>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="priceRange"
+                    value="100-150"
+                    id="range2"
+                  />
+                  <label htmlFor="range2">100 - 150</label>
+                </div>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    name="priceRange"
+                    value="150-200"
+                    id="range3"
+                  />
+                  <label htmlFor="range3">150 - 200</label>
+                </div>
               </div>
             </aside>
           )}
