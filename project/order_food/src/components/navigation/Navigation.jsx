@@ -4,7 +4,7 @@ import "./Navigation.css";
 import AuthModal from "../../Auth/AuthModal";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Bars3Icon,
   MagnifyingGlassIcon,
@@ -59,10 +59,20 @@ export default function Navigation() {
     }
   }, [jwt, auth.jwt]);
 
+  const handleCart = () => {
+    navigate("/cart");
+  };
+  const handleMyOrder = () => {
+    navigate("/account/order");
+  };
+  const handlePersonal = () => {
+    navigate("/account/personal");
+  };
+
   return (
     <div>
       <header>
-        <div class="container">
+        <div class="container ">
           <div class="row-flex">
             <div class="header-logo">
               <img src={logo} alt="" />
@@ -71,19 +81,19 @@ export default function Navigation() {
               <nav>
                 <ul>
                   <li>
-                    <a href="#">Trang Chủ</a>
+                    <Link to={"/"}>Trang chủ</Link>
                   </li>
                   <li>
-                    <a href="#">Thực Đơn</a>
+                    <Link to={"/menu"}>Thực đơn</Link>
                   </li>
                   <li>
-                    <a href="#">Bài Viết </a>
+                    <Link to={"/article"}>Bài viết</Link>
                   </li>
                   <li>
-                    <a href="#">Dịch Vụ</a>
+                    <Link to={"/service"}>Dịch vụ</Link>
                   </li>
                   <li>
-                    <a href="#">Liên Hệ</a>
+                    <Link to={"/contact"}>Liên hệ</Link>
                   </li>
                 </ul>
               </nav>
@@ -103,7 +113,10 @@ export default function Navigation() {
                 </div>
                 {/* cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Button className="group -m-2 flex items-center p-2">
+                  <Button
+                    className="group -m-2 flex items-center p-2"
+                    onClick={handleCart}
+                  >
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -138,10 +151,14 @@ export default function Navigation() {
                         "aria-labelledby": "basic-button",
                       }}
                     >
-                      <MenuItem>Profile</MenuItem>
-                      <MenuItem onClick={""}>My Orders</MenuItem>
+                      <MenuItem onClick={() => handlePersonal()}>
+                        Hồ sơ cá nhân
+                      </MenuItem>
+                      <MenuItem onClick={() => handleMyOrder()}>
+                        Đơn hàng của tôi
+                      </MenuItem>
                       <MenuItem></MenuItem>
-                      <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                      <MenuItem onClick={handleLogout}>Đăng xuất</MenuItem>
                     </Menu>
                   </div>
                 ) : (

@@ -79,6 +79,9 @@ export default function LoginForm() {
             Đăng kí
           </Button>
         </div>
+        <div className="py-3 flex items-center">
+          <Button>Quên mật khẩu</Button>
+        </div>
       </div>
     </div>
   );

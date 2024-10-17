@@ -6,7 +6,7 @@ export default function ContentItem() {
   return (
     <div>
       <div>
-        <ProductFood />
+        <ProductFood title={"Sản Phẩm"} />
       </div>
       <div className="mt-5">
         <AboutUs />

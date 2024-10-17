@@ -1,0 +1,76 @@
+.row-grid {
+  display: flex;
+  padding-top: 50px;
+}
+#service {
+  padding: 20px; /* Padding cho phần tổng thể */
+  background-color: #f9f9f9; /* Màu nền cho phần dịch vụ */
+}
+
+.row-grid {
+  justify-content: flex-start; /* Căn trái cho nội dung trong row-grid */
+}
+
+.heading-text {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left; /* Căn trái nội dung */
+}
+
+.service-container {
+  padding-top: 30px;
+  padding-left: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 20px;
+  padding-left: 100px;
+}
+
+.promo-image {
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.promo-text h2 {
+  font-size: 24px;
+  color: #d22b2b;
+  margin-bottom: 10px;
+}
+
+.promo-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.promo-btn {
+  background-color: #d22b2b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.promo-btn:hover {
+  background-color: #c32020;
+}

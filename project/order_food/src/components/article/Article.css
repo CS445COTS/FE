@@ -1,0 +1,93 @@
+.row-grid {
+  display: flex;
+}
+.blog {
+  padding: 50px 50px;
+  background-color: hsl(0, 0%, 93%);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* Thay đổi hướng thành cột */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-banner .card-image {
+  width: 100%;
+  height: auto;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: hsl(31, 84%, 50%);
+  color: hsl(0, 0%, 100%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Chiếm toàn bộ không gian khả dụng */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: hsl(210, 26%, 7%);
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: hsl(0, 0%, 60%);
+  margin-bottom: 20px;
+  flex-grow: 1; /* Để mở rộng chiều cao của mô tả */
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto; /* Đẩy nút xuống dưới cùng */
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: orange;
+}
+
+.read-more i {
+  margin-left: 5px;
+}

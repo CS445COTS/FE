@@ -1,7 +1,7 @@
 export const filterPrice = [
   {
     id: "price",
-    name: "Price",
+    name: "Giá Cả",
     options: [
       {
         value: "20-90",
@@ -9,7 +9,7 @@ export const filterPrice = [
       },
       {
         value: "90-100",
-        label: "90VNĐ đến 10VNĐ",
+        label: "90VNĐ đến 100VNĐ",
       },
       {
         value: "100-150",
@@ -26,10 +26,10 @@ export const filterPrice = [
 export const filterCategory = [
   {
     id: "category",
-    name: "Category",
+    name: "Danh Mục",
     options: [
       {
-        value: "gà",
+        value: "chicken",
         label: "gà",
       },
       {
@@ -37,20 +37,24 @@ export const filterCategory = [
         label: "pizza",
       },
       {
-        value: "mì ý",
-        label: "mì ý",
+        value: "noodle",
+        label: "mì",
       },
       {
-        value: "cơm",
+        value: "rice",
         label: "cơm",
       },
       {
-        value: "nước uống",
-        label: "nước uống",
+        value: "water",
+        label: "nước",
       },
       {
         value: "burger",
         label: "burger",
+      },
+      {
+        value: "appetizer",
+        label: "món khai vị",
       },
     ],
   },

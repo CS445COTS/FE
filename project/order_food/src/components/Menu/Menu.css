@@ -8,14 +8,14 @@
   padding: 15px;
   cursor: pointer;
   display: flex;
-  background-color: white !important;
+  background-color: #f4f4f4;
 }
 
 /* Filter Section */
 .filter {
-  background-color: white !important;
+  background-color: #f4f4f4;
   padding: 20px;
-  width: 150px;
+  width: 250px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +77,7 @@
 /* sanpham */
 .sanpham {
   flex-grow: 1;
-  background-color: white !important;
+  background-color: #f4f4f4;
   padding: 20px;
 }
 
@@ -256,16 +256,99 @@ ul.products li .product-info .product-price {
   color: #3b5998;
 }
 
-.productCard .textPart {
-  transition: transform 0.3s ease-out;
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
 }
 
-.productCard:hover .textPart {
-  transform: translateY(-1rem);
+.container-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.productCard:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.about-banner {
+  flex: 1;
+  position: relative;
+  margin-right: 40px;
+}
+
+.about-img {
+  max-width: 100%;
+}
+
+.about-banner .abs-img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 150px;
+  height: auto;
+  z-index: 1;
+}
+
+.about-content {
+  flex: 1;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(210, 26%, 7%);
+  margin-bottom: 20px;
+}
+
+.section-title .span {
+  color: hsl(32, 100%, 59%);
+}
+
+.section-text {
+  font-size: 1rem;
+  color: hsl(0, 0%, 60%);
+  margin-bottom: 20px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.about-item ion-icon {
+  background-color: hsl(32, 100%, 59%);
+  color: white;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.about-item .span {
+  color: hsl(210, 26%, 7%);
+}
+
+.btn-about {
+  display: inline-block;
+  background-color: hsl(32, 100%, 59%);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-about:hover {
+  color: black;
 }

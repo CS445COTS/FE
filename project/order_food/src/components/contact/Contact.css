@@ -1,0 +1,60 @@
+.row-grid {
+  padding-left: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap;
+  padding: 70px 0 0 0; /* Adjusted padding */
+}
+
+.contact-left {
+  flex: 3;
+  margin-right: 20px;
+  padding-top: 70px;
+}
+
+.contact-left iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.contact-right {
+  flex: 3;
+  padding-top: 50px;
+}
+
+#form-contact {
+  width: 75%;
+  height: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px; /* Added margin to separate from the map */
+}
+
+#form-contact h3 {
+  text-align: center;
+  padding: 15px;
+}
+
+#form-contact input[type="text"],
+#form-contact input[type="email"],
+#form-contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#form-contact input[type="submit"] {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

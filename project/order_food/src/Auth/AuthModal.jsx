@@ -19,9 +19,6 @@ const style = {
 
 export default function AuthModal({ handleClose, open }) {
   const location = useLocation();
-
-  console.log(open);
-
   return (
     <div>
       <Modal
